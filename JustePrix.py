@@ -2,7 +2,7 @@ import random
 
 print("Trouver le prix de l'objet X..")
 prix = (random.randint(1,10))
-for k in range (4):
+for k in range (5):
     essai = int(input("Votre proposition entre 1 et 10 :"))
     if essai < 1 or essai > 10:
         print ("entrez un valeur entre 1 et 10")
@@ -12,11 +12,6 @@ for k in range (4):
         print ("Le prix est moins cher")
     elif essai == prix :
         print ("Le prix est juste!!!",prix)
-        exit()
-essai = int(input("Votre proposition entre 1 et 10 :"))
-if essai == prix :
-        print ("Le prix est juste!!!",prix)
-        exit()
-else :
-    print ("Le prix est ",prix)
-    exit()
+        break
+
+print ("Le prix est ",prix)
